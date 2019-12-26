@@ -4,6 +4,7 @@
  * 一个类有多个相同的实例，每个实例自身创建和管理
  */
 
+//终结类 不能被继承
 final class multipleCaseMode {
 
 	/**
