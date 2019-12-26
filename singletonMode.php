@@ -1,7 +1,7 @@
 <?php 
 /**
  * 单例模式
- * 特点：四私一共（四私：私有实例变量、私有构造方法、私有的clone、私有的wakeup; 公有的获取实例方法）
+ * 特点：四私一公（四私：私有实例变量、私有构造方法、私有的clone、私有的wakeup; 公有的获取实例方法）
  * 用途：数据库的连接(不断的创建实例会浪费资源，消耗性能；一个实例还存在，可以继续使用，不需要再次创建)、锁定文件
  * @author  new1024kb
  * @since  2019-12-26
@@ -22,13 +22,13 @@ final class SingletonMode {
 	private function __construct() {}
 
 	/**
-	 * [__clone 私有克隆的模式方法，防止对象的clone]
+	 * [__clone 私有的 克隆魔术方法，防止对象的clone]
 	 * @return [type] [description]
 	 */
 	private function __clone() {}
 
 	/**
-	 * [__wakeup 私有的对象的反序列化]
+	 * [__wakeup 私有的 反序列化魔术方法]
 	 */
 	private function __wakeup() {}
 
