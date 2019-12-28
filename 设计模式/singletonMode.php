@@ -52,3 +52,4 @@ final class SingletonMode {
  * }
  */
 var_dump(SingletonMode::getInstance());
+
