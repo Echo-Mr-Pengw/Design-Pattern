@@ -50,3 +50,4 @@ var_dump(multipleCaseMode::getInstance(1));
 /*object(multipleCaseMode)#2 (0) {
 }*/
 var_dump(multipleCaseMode::getInstance(2));
+
