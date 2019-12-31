@@ -23,15 +23,15 @@ class Oracle implements DB {
 
 class SimpleFactoryMode {
 
-	public static function createDbConnect(string $dbType) {
+	public function createDbConnect(string $dbType) {
 		return new $dbType;
 	}
 }
 
 //连接MySQL
-$mysql = SimpleFactoryMode::createDbConnect('MySQL');
-$mysql->connect();
+$mysql = new SimpleFactoryMode();
+$mysql->createDbConnect('MySQL')->connect();
 
 //连接Oracle
-$oracle = SimpleFactoryMode::createDbConnect('Oracle');
-$oracle->connect();
+$oracle = new SimpleFactoryMode();
+$oracle->createDbConnect('Oracle')->connect();
