@@ -5,17 +5,13 @@
  * @since  2019-12-30
  */
 
-interface DB {
-	public function connect();
-}
-
-class MySQL implements DB {
+class MySQL {
 	public function connect() {
 		echo 'MySQL connection succeed';
 	}
 }
 
-class Oracle implements DB {
+class Oracle {
 	public function connect() {
 		echo 'Oracle connection succeed';
 	}
