@@ -6,10 +6,17 @@
  * @since  2020-01-02
  */
 
+/**
+ * 接口 DB
+ * 定义数据库公共的方法 connect()
+ */
 interface DB {
 	public function connect();
 }
 
+/**
+ * MySQL类实现DB
+ */
 class MySQL implements DB {
 
 	public function connect() {
@@ -17,6 +24,9 @@ class MySQL implements DB {
 	}
 }
 
+/**
+ * Oracle类实现DB
+ */
 class Oracle implements DB {
 
 	public function connect() {
@@ -24,6 +34,9 @@ class Oracle implements DB {
 	}
 }
 
+/**
+ * 类工厂
+ */
 class StaticFactoryModel {
 
 	public static function createConnect($dbType) {
