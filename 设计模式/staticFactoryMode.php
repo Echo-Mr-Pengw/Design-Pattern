@@ -39,6 +39,11 @@ class Oracle implements DB {
  */
 class StaticFactoryModel {
 
+	/**
+	 * [createConnect 静态方法 创建连接的方法]
+	 * @param  [type] $dbType [需实例化的数据库]
+	 * @return [type]         [description]
+	 */
 	public static function createConnect($dbType) {
 		if($dbType == 'MySQL') {
 			return new MySQL();
